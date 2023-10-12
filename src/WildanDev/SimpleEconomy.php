@@ -74,7 +74,7 @@ class SimpleEconomy extends PluginBase {
                 return false;
             }
         } elseif($cmd->getName() === "removebal" && $sender->hasPermission("simpleeconomy.removebal") && isset($args[0], $args[1]) && is_numeric($args[1])){
-            $target = $this->getServer()->getPlayerName($args[0]);
+            $target = $this->getServer()->getPlayerByPrefix($args[0]);
             if($target !== null && $target instanceof Player){
                 $amount = (float) $args[1];
                 if($this->reduceBalance($target, $amount)){
