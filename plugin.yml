@@ -1,0 +1,43 @@
+name: SimpleEconomy
+main: WildanDev\SimpleEconomy
+version: 1.0.0
+api: [5.0.0]
+description: A Simple Economy For Pocketmine
+commands:
+  pays:
+    description: Pay another player
+    usage: /pays <player> <amount>
+    permission: simpleeconomy.pays
+  balance:
+    description: Check your balance
+    usage: /balance
+    permission: simpleeconomy.balance
+  seebal:
+    description: Check another player's balance
+    usage: /seebal <player>
+    permission: simpleeconomy.seebal
+  topbal:
+    description: View top balances
+    usage: /topbal
+    permission: simpleeconomy.topbal
+  addbal:
+    description: Add balance to a player
+    usage: /addbal <player> <amount>
+    permission: simpleeconomy.addbal
+  removebal:
+    description: Remove balance from a player
+    usage: /removebal <player> <amount>
+    permission: simpleeconomy.removebal
+permissions:
+  simpleeconomy.addbal:
+    default: op
+  simpleeconomy.removebal:
+    default: op
+  simpleeconomy.pays:
+    default: true
+  simpleeconomy.balance:
+    default: true
+  simpleeconomy.seebal:
+    default: true
+  simpleeconomy.topbal:
+    default: true
